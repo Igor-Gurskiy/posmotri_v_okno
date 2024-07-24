@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -35,4 +35,264 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  min-block-size: 534px;
+  gap: 30px;
+  padding: 133px 30px;
+  align-items: end;
+}
+
+.result {
+  block-size: 100%;
+  inline-size: 711px;
+}
+
+.result__video-container {
+  inline-size: 100%;
+  block-size: 386px;
+  margin-block-end: 15px;
+  position: relative;
+}
+
+.result__video {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.search-form {
+  display: flex;
+  gap: 37px;
+  justify-content: space-between;
+}
+
+fieldset:first-child {
+  min-inline-size: 225px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-block-end: 5px;
+}
+
+.search-form__label-text {
+  vertical-align: middle;
+}
+
+.search-form__textfield {
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  background-color: transparent;
+  padding: 2.5px 0;
+  min-inline-size: 100%;
+  appearance: none;
+  border: none;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__textfield {
+  appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+label:has(:focus-visible) {
+  outline-offset: 1px;
+  outline: 1px solid #fff;
+}
+
+input[type="text"]:active {
+  border: 1px solid #fff;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  inline-size: 19px;
+  block-size: 19px;
+  background-color: #1b1919;
+  border: 1px solid #fff;
+}
+
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  inline-size: 15px;
+  block-size: 15px;
+  background-color: #fff;
+  margin: 1px;
+}
+
+label:hover > span {
+  text-decoration: underline;
+}
+
+.button,
+.search-form__label {
+  cursor: pointer;
+}
+
+.button {
+  background-color: transparent;
+  font-family: "Fira Sans Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #fff;
+  border: 1px solid #fff;
+  min-block-size: 34px;
+  align-self: flex-end;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline-offset: 1px;
+  outline: 1px solid #fff;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+button:active {
+  background-color: #545050;
+}
+
+.search-form__submit-button {
+  padding: 6px 73.5px;
+}
+
+.content__details {
+  block-size: 100%;
+  inline-size: 399px;
+}
+
+.title {
+  margin-block-end: 26px;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  block-size: 298px;
+  inline-size: 100%;
+  position: relative;
+  overflow: auto;
+  padding: 2px;
+}
+
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
+ul > li:not(:last-child) {
+  margin-block-end: 30px;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: #545050;
+}
+
+.content__list-item {
+  display: block;
+  min-block-size: 107px;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 2px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.content__video-card-title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: "Fira Sans Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+}
+
+.more-button {
+  inline-size: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
