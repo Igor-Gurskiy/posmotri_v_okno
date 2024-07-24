@@ -42,6 +42,7 @@ ol {
   min-block-size: 534px;
   gap: 30px;
   align-items: end;
+  margin: auto;
 }
 
 .result {
